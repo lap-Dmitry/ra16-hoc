@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Videos from './components/time/Videos';
+import List from './components/highlight/List';
+
+import videoList from './data/VideoList';
+import blockList from './data/BlockList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>    
+    <div className='title'>Форматирование даты публикации</div>
+    <div className='container'>
+    <Videos list={videoList} />
     </div>
+        
+    <div className='title'>Популярное и новое</div>
+    <div className='box'>
+    <List list={blockList} />
+    </div>
+    </>
   );
 }
 
